@@ -1,0 +1,17 @@
+{
+  "name": "random-internet",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/import-catalog.js && vite",
+    "build": "node scripts/import-catalog.js && vite build",
+    "preview": "vite preview",
+    "catalog:import": "node scripts/import-catalog.js",
+    "catalog:commoncrawl": "node scripts/import-commoncrawl.js",
+    "catalog:check": "node scripts/import-catalog.js --require-100k",
+    "test": "node scripts/test-catalog.js"
+  },
+  "dependencies": { "@vitejs/plugin-react": "latest", "vite": "latest", "react": "latest", "react-dom": "latest", "lucide-react": "^0.468.0" },
+  "devDependencies": {}
+}

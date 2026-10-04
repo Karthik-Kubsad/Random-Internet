@@ -1,0 +1,8 @@
+.portal{transform-style:preserve-3d;will-change:transform;transition:transform .22s cubic-bezier(.2,.8,.2,1),box-shadow .3s,filter .3s}
+.portal:hover{transform:perspective(850px) rotateX(var(--tilt-x,0deg)) rotateY(var(--tilt-y,0deg)) translateY(-3px) scale(1.055);box-shadow:0 0 0 1px rgba(255,174,159,.4),0 0 82px rgba(235,57,47,.62),0 24px 0 -10px rgba(104,17,13,.9),0 29px 55px rgba(0,0,0,.62),inset 0 3px 5px rgba(255,229,219,.62),inset 0 -18px 26px rgba(94,9,6,.3)}
+.portal:focus-visible{outline:2px solid rgba(255,188,174,.88);outline-offset:10px}
+.portal:active{transform:perspective(850px) rotateX(var(--tilt-x,0deg)) rotateY(var(--tilt-y,0deg)) translateY(3px) scale(.975);box-shadow:0 0 35px rgba(227,51,43,.38),0 5px 0 -2px rgba(104,17,13,.8),inset 0 2px 5px rgba(255,210,198,.48),inset 0 -8px 15px rgba(94,9,6,.3)}
+.portal-inner{position:relative;overflow:hidden}
+.portal-inner:before{content:"";position:absolute;inset:9%;border-radius:50%;background:linear-gradient(125deg,rgba(255,255,255,.19),transparent 39%);pointer-events:none;transform:translateX(-16%) rotate(-18deg)}
+.portal:hover .portal-inner:before{transform:translateX(8%) rotate(-18deg);transition:transform .45s ease}
+@media(prefers-reduced-motion:reduce){.portal,.portal:hover,.portal:active{transform:none!important}}
